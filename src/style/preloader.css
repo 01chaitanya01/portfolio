@@ -29,6 +29,7 @@
     animation-fill-mode: forwards;
 }
 
+
 @keyframes image {
     from{
         opacity: 1;

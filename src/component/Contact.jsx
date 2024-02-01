@@ -5,6 +5,8 @@ import "../style/contact.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import loader from "../images/preloader2.gif"
+
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -13,6 +15,8 @@ const Contact = () => {
         message: '',
         receiverEmail: 'choudharichaitu0101@gmail.com'
     });
+
+    const [loading, setLoading] = useState(false)
 
     const handleChange = (e) => {
         setFormData({
@@ -25,7 +29,8 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8080/contactform', formData);
+            setLoading(true)
+            const response = await axios.post('https://api.codestream.tech/contactform/choudharichaitu0101@gmail.com', formData);
 
             console.log(response.data.message);
             notifySuccess(response.data.message);
@@ -35,12 +40,14 @@ const Contact = () => {
                 subject: '',
                 message: '',
             })
+            setLoading(false)
         } catch (error) {
             console.error('Error sending contact form:', error);
             notifyError(error.message)
+            setLoading(false)
         }
 
-        console.log(formData)
+        // console.log(formData)
     };
 
     const notifySuccess = (message) => toast.success(message, {
@@ -63,9 +70,13 @@ const Contact = () => {
                     <input name='subject' type="text" placeholder='Subject' value={formData.subject} onChange={handleChange} required />
                     <textarea name="message" cols="30" rows="15" placeholder='Message' value={formData.message} onChange={handleChange} required></textarea>
                     <button className='btn' type='submit'>Send</button>
+                    <div className={`loader ${loading ? "active-loader" : ""}`}>
+                        <img src={loader} alt="" />
+                    </div>
                 </form>
             </div>
             <ToastContainer />
+
         </div>
     );
 };

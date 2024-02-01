@@ -3,6 +3,8 @@ import '../style/navbar.css'
 import { Link } from 'react-router-dom'
 import { FaBars, FaXmark } from "react-icons/fa6";
 
+import logo from "../images/logo.png"
+
 const Navbar = () => {
 
     const [menu, setMenu] = useState(false);
@@ -16,7 +18,7 @@ const Navbar = () => {
             <div className="logo">
                 <a href='#homepage'>
                     <div className="logo-image">
-                        <img src="/images/logo.png" alt="" />
+                        <img src={logo} alt="" />
                     </div>
                 </a>
                 <a href='#homepage'><h2>Chaitanya Choudhari</h2></a>
