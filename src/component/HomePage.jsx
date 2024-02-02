@@ -2,8 +2,6 @@ import React from 'react'
 import "../style/homepage.css"
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa6";
 
-import { Link } from 'react-router-dom'
-
 const HomePage = () => {
   return (
     <div className='homepage' id='homepage'>
