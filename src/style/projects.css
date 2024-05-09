@@ -80,6 +80,14 @@
     min-width: 50%;
 }
 
+.project-card .new-project-image{
+    max-width: 50%;
+}
+
+.project-card .new-project-image img{
+    width: 100%;
+}
+
 .project-card .project-description {
     display: flex;
     flex-direction: column;
@@ -115,5 +123,9 @@
 
     .project-card .project-description {
         padding: 0 10px;
+    }
+
+    .project-card .new-project-image{
+        max-width: 100%;
     }
 }

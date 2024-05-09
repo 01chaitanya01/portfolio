@@ -33,6 +33,12 @@ const About = () => {
                         <p>SQL</p>
                         <p>Terminal</p>
                         <p>Machine Learning</p>
+                        <p>Tensorflow</p>
+                        <p>Streamlit</p>
+                        <p>OpenCV</p>
+                        <p>Pandas</p>
+                        <p>Numpy</p>
+                        <p>Matplotlib</p>
                     </div>
                 </div>
             </div>
