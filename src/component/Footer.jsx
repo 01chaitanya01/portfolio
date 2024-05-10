@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyright">
-                <p>&copy; Copyright 2024. Made by <a style={{ color: "#e9ecef", borderBottom: "1px solid #e9ecef"}} href="chaitanyachoudhari.me" target='blank'>Chaitanya Choudhari</a></p>
+                <p>&copy; Copyright 2024. Made by <a style={{ color: "#e9ecef", borderBottom: "1px solid #e9ecef"}} href="/" target='blank'>Chaitanya Choudhari</a></p>
             </div>
         </div>
     )

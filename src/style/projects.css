@@ -51,6 +51,8 @@
 
 .projects p {
     color: #ced4da;
+    text-align: justify;
+    padding-right: 5px;
 }
 
 .project-cards {
